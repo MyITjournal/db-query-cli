@@ -9,10 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Ensure only dev branch merges into main
+      - name: Ensure PR to main comes from dev
         run: |
-          if [ "${{ github.head_ref }}" != "dev" ]; then
-            echo "Error: only the 'dev' branch can be merged into main. Got: ${{ github.head_ref }}"
+          if [ "${{ github.base_ref }}" = "main" ] && [ "${{ github.head_ref }}" != "dev" ]; then
+            echo "Only dev branch can be merged into main"
             exit 1
           fi
-          echo "dev -> main merge approved"

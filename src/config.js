@@ -29,5 +29,6 @@ export async function clearCredentials() {
   try {
     await rm(CREDENTIALS_FILE, { force: true });
   } catch {
-      }
+    // the file might not exist
+  }
 }

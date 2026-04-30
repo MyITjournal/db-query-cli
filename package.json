@@ -1,0 +1,43 @@
+{
+  "name": "insighta",
+  "version": "1.0.0",
+  "description": "CLI tool for the Insighta profiles API",
+  "type": "module",
+  "bin": {
+    "insighta": "./bin/insighta.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node bin/insighta.js",
+    "lint": "eslint src/ test.js",
+    "test": "node --test test.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "eslint": "^9.25.1"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "cli-table3": "^0.6.5",
+    "commander": "^13.1.0",
+    "open": "^10.1.0",
+    "ora": "^8.2.0"
+  },
+  "keywords": [
+    "cli",
+    "profiles",
+    "insighta"
+  ],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyITjournal/samplerepo_cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MyITjournal/samplerepo_cli/issues"
+  },
+  "homepage": "https://github.com/MyITjournal/samplerepo_cli#readme"
+}

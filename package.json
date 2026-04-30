@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "node bin/insighta.js",
-    "lint": "eslint src/ test.js",
+    "lint": "eslint src/ bin/ test.js",
     "test": "node --test test.js"
   },
   "devDependencies": {

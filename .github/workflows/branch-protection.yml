@@ -2,7 +2,7 @@ name: Enforce main branch source rules
 
 on:
   pull_request:
-    branches: [main, dev]
+    branches: [main]
 
 jobs:
   check-source-branch:

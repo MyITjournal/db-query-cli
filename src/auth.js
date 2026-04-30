@@ -171,7 +171,9 @@ export async function logout() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ refresh_token: creds.refresh_token }),
     });
-  } catch {}
+  } catch {
+    return;
+  }
 
   await clearCredentials();
   return true;

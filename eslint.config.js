@@ -1,12 +1,18 @@
-import js from '@eslint/js';
+import js from "@eslint/js";
+import globals from "globals";
 
 export default [
   js.configs.recommended,
   {
-    files: ['src/**/*.js', 'bin/**/*.js', 'test.js'],
+    files: ["src/**/*.js", "bin/**/*.js", "test.js"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
     rules: {
-      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      'no-console': 'off',
+      "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+      "no-console": "off",
     },
   },
 ];

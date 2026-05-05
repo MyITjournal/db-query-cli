@@ -18,8 +18,6 @@ program
   .description('CLI tool for the Insighta profiles API')
   .version('1.0.0');
 
-// ── Auth ──────────────────────────────────────────────────────────────────────
-
 program
   .command('login')
   .description('Log in via GitHub OAuth')
@@ -34,8 +32,6 @@ program
   .command('whoami')
   .description('Show the currently logged-in user')
   .action(whoamiCommand);
-
-// ── Profiles ──────────────────────────────────────────────────────────────────
 
 const profiles = program.command('profiles').description('Manage profiles');
 

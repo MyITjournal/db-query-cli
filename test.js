@@ -1,9 +1,9 @@
-import { test, describe, before, after, beforeEach } from "node:test";
+import { test, describe, after, beforeEach } from "node:test";
 import assert from "node:assert/strict";
 import { randomBytes, createHash } from "node:crypto";
 import { homedir } from "node:os";
 import { join } from "node:path";
-import { rm, readFile } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 
 function decodeJwtPayload(token) {
   try {
